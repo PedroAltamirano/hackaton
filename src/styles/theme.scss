@@ -1,6 +1,9 @@
-// FONTS
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@import "~bootstrap/scss/bootstrap";
+
+@import "./home.scss";
+@import "./resume.scss";
 
 body{
 font-family: 'Space Mono', monospace;
@@ -18,5 +21,3 @@ font-family: 'Press Start 2P', cursive;
 .font-bold {
   font-weight: bold
 }
-
-@import "../node_modules/bootstrap/scss/bootstrap";
