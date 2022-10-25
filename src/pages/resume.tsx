@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import About from '../components/Resume/About'
-import Header from '../components/Resume/Header'
-import Projects from '../components/Resume/Projects'
-import Experience from '../components/Resume/Experience'
-import Skills from '../components/Resume/Skills'
-import Education from '../components/Resume/Education'
-import Languages from '../components/Resume/Languages'
-import Interests from '../components/Resume/Interests'
-import Footer from '../components/Resume/Footer'
+import About from 'components/Resume/About'
+import Header from 'components/Resume/Header'
+import Projects from 'components/Resume/Projects'
+import Experience from 'components/Resume/Experience'
+import Skills from 'components/Resume/Skills'
+import Education from 'components/Resume/Education'
+import Languages from 'components/Resume/Languages'
+import Interests from 'components/Resume/Interests'
+import Footer from 'components/Resume/Footer'
 
 const Home: NextPage = () => {
     return (
