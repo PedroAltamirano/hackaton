@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
 h1,
 h2,
 h3,
@@ -25,6 +24,8 @@ h6 {
   font-family: 'Press Start 2P', cursive;
 }
 
+$primary: #25c68a;
 $font-family-base: 'Space Mono', monospace;
 
 @import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-svg-core/styles.css";

@@ -9,31 +9,32 @@ import Navigation from 'components/Home/Navigation'
 import Projects from 'components/Home/Projects'
 import Skills from 'components/Home/Skills'
 
-const Home: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Pedro Altamirano</title>
-        <meta name="author" content="Pedro Altamirano" />
-        <meta name="description" content="Pedro Altamirano personal portfolio and resume." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Home: NextPage = () => (
+  <>
+    <Head>
+      <title>Pedro Altamirano</title>
+      <meta name="author" content="Pedro Altamirano" />
+      <meta
+        name="description"
+        content="Pedro Altamirano personal portfolio and resume."
+      />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
 
-      <Navigation />
+    <Navigation />
 
-      <Header />
+    <Header />
 
-      <About />
+    <About />
 
-      <Projects />
+    <Projects />
 
-      <Skills />
+    <Skills />
 
-      <Contact />
+    <Contact />
 
-      <Footer />
-    </>
-  )
-}
+    <Footer />
+  </>
+)
 
 export default Home
