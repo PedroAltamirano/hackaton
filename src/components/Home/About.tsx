@@ -3,7 +3,7 @@ import React from 'react'
 import { Button, Col, Container, Row, Image } from 'react-bootstrap'
 
 const About = () => (
-  <section id="about" className="bg-black text-center text-white">
+  <section id="about" className="bg-black text-center text-white p-5">
     <Container>
       <Row>
         <Col lg={8} className="mx-auto">

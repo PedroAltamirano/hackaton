@@ -8,7 +8,7 @@ const Footer = () => (
     <Container>
       <Stack
         direction="horizontal"
-        gap={3}
+        gap={2}
         className="justify-content-center mb-4"
       >
         <Button

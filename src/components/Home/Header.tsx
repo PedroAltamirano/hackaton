@@ -1,18 +1,21 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
 const Header = () => (
   <header
-    className="masthead"
-    style={{ backgroundImage: "url('/fondo_code_bk.jpg')" }}
+    className="vh-100 vw-100"
+    style={{ backgroundImage: "url('/images/fondo_code_bk.jpg')" }}
   >
-    <div className="intro-body">
-      <div className="container">
+    <div className="d-flex align-items-center h-100">
+      <Container fluid>
         <h1
-          className="brand-heading text text-center h1  font-ps"
-          data-period="2000"
+          className="text-center text-white font-ps"
+          data-period="3000"
           data-type="['<CODE>', '<PEDRO ALTAMIRANO>']"
-        ></h1>
-      </div>
+        >
+          HOLA
+        </h1>
+      </Container>
     </div>
   </header>
 )
