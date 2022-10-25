@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
+import { Typewriter } from 'react-simple-typewriter'
 
 const Header = () => (
   <header
@@ -8,12 +9,13 @@ const Header = () => (
   >
     <div className="d-flex align-items-center h-100">
       <Container fluid>
-        <h1
-          className="text-center text-white font-ps"
-          data-period="3000"
-          data-type="['<CODE>', '<PEDRO ALTAMIRANO>']"
-        >
-          HOLA
+        <h1 className="text-center text-white font-ps jumbo">
+          <Typewriter
+            words={['<CODE>', '<BACKEND>', '<DEVELOPER>', '</>']}
+            typeSpeed={110}
+            delaySpeed={3000}
+            loop={0}
+          />
         </h1>
       </Container>
     </div>

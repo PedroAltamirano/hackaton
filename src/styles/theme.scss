@@ -24,6 +24,16 @@ h6 {
   font-family: 'Press Start 2P', cursive;
 }
 
+.jumbo {
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  .jumbo {
+    font-size: 6rem;
+  }
+}
+
 $primary: #25c68a;
 $font-family-base: 'Space Mono', monospace;
 
