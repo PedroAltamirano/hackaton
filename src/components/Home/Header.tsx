@@ -4,6 +4,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const Header = () => (
   <header
+    id="page-top"
     className="vh-100 vw-100"
     style={{ backgroundImage: "url('/images/fondo_code_bk.jpg')" }}
   >

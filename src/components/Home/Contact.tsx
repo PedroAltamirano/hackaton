@@ -6,7 +6,7 @@ import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
 const Contact = () => (
   <section id="contact" className="p-5 text-center text-black bg-light">
     <Container>
-      <h2 className=" font-ps">contact me</h2>
+      <h2 className="mb-4 font-ps">contact me</h2>
       <Row>
         <Col md={7}>
           <Form>
