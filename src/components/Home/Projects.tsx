@@ -1,5 +1,5 @@
-import React from 'react'
 import { Col, Container, Row, Image } from 'react-bootstrap'
+
 import IProject from 'types/project'
 
 interface IProps {

@@ -1,14 +1,15 @@
-import { NAME } from 'constants/core'
-import React from 'react'
 import { Button, Container, Stack } from 'react-bootstrap'
+
+import IAbout from 'types/about'
 import ILink from 'types/links'
 import { getIcon } from 'utils/icons'
 
 interface IProps {
+  about: IAbout
   links: ILink[]
 }
 
-const Footer = ({ links }: IProps) => (
+const Footer = ({ about, links }: IProps) => (
   <footer className="bg-black p-5">
     <Container>
       <Stack
@@ -33,7 +34,7 @@ const Footer = ({ links }: IProps) => (
       </Stack>
 
       <Container className="text-center text-white">
-        <p>{NAME} 2022</p>
+        <p>{about.name} 2022</p>
       </Container>
     </Container>
   </footer>

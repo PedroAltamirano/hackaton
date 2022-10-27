@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Education = () => (
   <section id="education" className="skills-section py-3">
     <h3 className="text-uppercase resume-section-heading mb-4">Education</h3>

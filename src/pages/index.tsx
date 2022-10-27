@@ -1,6 +1,12 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
 
+import ILink from 'types/links'
+import IProject from 'types/project'
+import IAbout from 'types/about'
+import { ISkillsCats } from 'types/skills'
+import supabase from 'utils/supabase'
+
 import Header from 'components/Home/Header'
 import About from 'components/Home/About'
 import Contact from 'components/Home/Contact'
@@ -8,12 +14,6 @@ import Footer from 'components/Home/Footer'
 import Navigation from 'components/Home/Navigation'
 import Projects from 'components/Home/Projects'
 import Skills from 'components/Home/Skills'
-import supabase from 'utils/supabase'
-import ILink from 'types/links'
-import IProject from 'types/project'
-import IAbout from 'types/about'
-import { ISkillsCats } from 'types/skills'
-import { NAME } from 'constants/core'
 
 interface IProps {
   about: IAbout
@@ -71,13 +71,13 @@ const Home: NextPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <Head>
-      <title>{NAME}</title>
-      <meta name="author" content={NAME} />
-      <meta name="description" content={`${NAME} personal portfolio.`} />
+      <title>{about.name}</title>
+      <meta name="author" content={about.name} />
+      <meta name="description" content={`${about.name} personal portfolio.`} />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Navigation />
+    <Navigation about={about} />
 
     <Header />
 
@@ -89,7 +89,7 @@ const Home: NextPage = ({
 
     <Contact />
 
-    <Footer links={links} />
+    <Footer about={about} links={links} />
   </>
 )
 

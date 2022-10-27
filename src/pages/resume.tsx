@@ -1,9 +1,13 @@
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
+import { Col, Container, Row } from 'react-bootstrap'
 
+import IEducation from 'types/education'
+import ILanguage from 'types/languages'
+import IInterest from 'types/interests'
 import IAbout from 'types/about'
 import IProject from 'types/project'
-import { ISkills } from 'types/skills'
+import { ISkill } from 'types/skills'
 import ILink from 'types/links'
 import supabase from 'utils/supabase'
 
@@ -16,16 +20,11 @@ import Education from 'components/Resume/Education'
 import Languages from 'components/Resume/Languages'
 import Interests from 'components/Resume/Interests'
 import Footer from 'components/Resume/Footer'
-import { Col, Container, Row } from 'react-bootstrap'
-import IEducation from 'types/education'
-import ILanguage from 'types/languages'
-import IInterest from 'types/interests'
-import { NAME } from 'constants/core'
 
 interface IProps {
   about: IAbout
   projects: IProject[]
-  skills: ISkills[]
+  skills: ISkill[]
   education: IEducation[]
   languages: ILanguage[]
   interests: IInterest[]
@@ -65,9 +64,9 @@ const Home: NextPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <Head>
-      <title>{NAME}</title>
-      <meta name="author" content={NAME} />
-      <meta name="description" content={`${NAME} resume.`} />
+      <title>{about.name}</title>
+      <meta name="author" content={about.name} />
+      <meta name="description" content={`${about.name} resume.`} />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
@@ -94,7 +93,7 @@ const Home: NextPage = ({
       </Row>
       <hr />
 
-      <Footer links={links} />
+      <Footer about={about} links={links} />
     </Container>
   </>
 )

@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import React from 'react'
 import { Button, Col, Container, Row, Image } from 'react-bootstrap'
+
 import IAbout from 'types/about'
 
 interface IProps {
