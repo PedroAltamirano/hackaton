@@ -56,15 +56,15 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
 
   return {
     props: {
-      about,
-      projects,
-      skillsCats,
-      links,
+      about: about as IAbout,
+      projects: projects as IProject[],
+      skillsCats: skillsCats as ISkillsCats[],
+      links: links as ILink[],
     },
   }
 }
 
-const Home: NextPage = ({
+const Home = ({
   about,
   projects,
   skillsCats,

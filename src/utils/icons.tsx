@@ -45,5 +45,7 @@ const ICONS = {
 }
 
 export const getIcon = (icon: string, options?: any) => (
+  // eslint-disable-next-line
+  // @ts-ignore
   <FontAwesomeIcon icon={ICONS[icon]} fixedWidth {...options} />
 )

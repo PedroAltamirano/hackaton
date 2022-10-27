@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
   const { data: about } = await supabase.from('about').select('*').single()
   const { data: experience } = await supabase.from('experience').select('*')
   const { data: projects } = await supabase.from('projects').select('*')
-  const { data: skills } = await supabase.from('skills').select('*')
+  const { data: skills } = (await supabase.from('skills').select('*')) || []
   const { data: education } = await supabase.from('education').select('*')
   const { data: languages } = await supabase.from('languages').select('*')
   const { data: interests } = await supabase.from('interests').select('*')
@@ -45,19 +45,19 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
 
   return {
     props: {
-      about,
-      experience,
-      projects,
-      skills,
-      education,
-      languages,
-      interests,
-      links,
+      about: about as IAbout,
+      experience: experience as IExperience[],
+      projects: projects as IProject[],
+      skills: skills as ISkill[],
+      education: education as IEducation[],
+      languages: languages as ILanguage[],
+      interests: interests as IInterest[],
+      links: links as ILink[],
     },
   }
 }
 
-const Home: NextPage = ({
+const Resume = ({
   about,
   experience,
   projects,
@@ -66,7 +66,7 @@ const Home: NextPage = ({
   languages,
   interests,
   links,
-}: InferGetStaticPropsType<typeof getStaticProps>) => (
+}: IProps) => (
   <>
     <Head>
       <title>{about.name}</title>
@@ -105,4 +105,4 @@ const Home: NextPage = ({
   </>
 )
 
-export default Home
+export default Resume
