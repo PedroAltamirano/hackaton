@@ -1,4 +1,4 @@
-import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 
 import ILink from 'types/links'

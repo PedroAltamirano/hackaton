@@ -1,4 +1,4 @@
-import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { Col, Container, Row } from 'react-bootstrap'
 
@@ -66,7 +66,7 @@ const Resume = ({
   languages,
   interests,
   links,
-}: IProps) => (
+}: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <Head>
       <title>{about.name}</title>
