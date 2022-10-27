@@ -1,10 +1,9 @@
-interface ILink {
+interface ILanguage {
   id: number
   created_at: Date
   updated_at: Date
   name: string
-  url: string
-  icon: string
+  level: string
 }
 
-export default ILink
+export default ILanguage

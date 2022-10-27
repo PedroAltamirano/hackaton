@@ -5,15 +5,20 @@ import {
   faEnvelope,
   faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons'
+import IAbout from 'types/about'
 
-const Header = () => (
+interface IProps {
+  about: IAbout
+}
+
+const Header = ({ about }: IProps) => (
   <div id="resume-header" className="resume-header">
     <div className="row align-items-center">
-      <div className="col-12 col-md-6 col-lg-8 col-xl-9 resume-title">
+      <div className="col-12 col-md-6 col-md-8 col-xl-9 resume-title">
         <h2 className="resume-name mb-0 text-uppercase">Pedro Altamirano</h2>
         <h4 className="resume-tagline mb-3 mb-md-0">IT Engenner</h4>
       </div>
-      <div className="col-12 col-md-6 col-lg-4 col-xl-3 resume-contact">
+      <div className="col-12 col-md-6 col-md-4 col-xl-3 resume-contact">
         <ul className="list-unstyled mb-0">
           <li className="mb-2">
             <FontAwesomeIcon icon={faPhoneAlt} size="lg" className="mr-2" />

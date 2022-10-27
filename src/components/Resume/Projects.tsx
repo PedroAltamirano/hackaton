@@ -5,10 +5,10 @@ const Projects = () => (
     <h3 className="text-uppercase resume-section-heading mb-4">Projects</h3>
     <div id="item-project" className="item mb-3">
       <div className="item-heading row align-items-center mb-2 p-0">
-        <h4 className="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+        <h4 className="item-title col-12 col-md-6 col-md-8 mb-2 mb-md-0">
           servigraf
         </h4>
-        <p className="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right m-0">
+        <p className="item-meta col-12 col-md-6 col-md-4 text-muted text-left text-md-right m-0">
           Fullstack
         </p>
       </div>
@@ -32,10 +32,10 @@ const Projects = () => (
     </div>
     <div id="item-project-5" className="item mb-3">
       <div className="item-heading row align-items-center mb-2 p-0">
-        <h4 className="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+        <h4 className="item-title col-12 col-md-6 col-md-8 mb-2 mb-md-0">
           colaboratorio
         </h4>
-        <p className="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right m-0">
+        <p className="item-meta col-12 col-md-6 col-md-4 text-muted text-left text-md-right m-0">
           Backend
         </p>
       </div>
@@ -55,10 +55,10 @@ const Projects = () => (
     </div>
     <div id="item-project-4" className="item mb-3">
       <div className="item-heading row align-items-center mb-2 p-0">
-        <h4 className="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+        <h4 className="item-title col-12 col-md-6 col-md-8 mb-2 mb-md-0">
           joselito express
         </h4>
-        <p className="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right m-0">
+        <p className="item-meta col-12 col-md-6 col-md-4 text-muted text-left text-md-right m-0">
           Fullstack
         </p>
       </div>
@@ -81,10 +81,10 @@ const Projects = () => (
     </div>
     <div id="item-project-3" className="item mb-3">
       <div className="item-heading row align-items-center mb-2 p-0">
-        <h4 className="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+        <h4 className="item-title col-12 col-md-6 col-md-8 mb-2 mb-md-0">
           innomaps
         </h4>
-        <p className="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right m-0">
+        <p className="item-meta col-12 col-md-6 col-md-4 text-muted text-left text-md-right m-0">
           Frontend
         </p>
       </div>
@@ -105,10 +105,10 @@ const Projects = () => (
     </div>
     <div id="item-project-2" className="item mb-3">
       <div className="item-heading row align-items-center mb-2 p-0">
-        <h4 className="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+        <h4 className="item-title col-12 col-md-6 col-md-8 mb-2 mb-md-0">
           made in yachay tech
         </h4>
-        <p className="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right m-0">
+        <p className="item-meta col-12 col-md-6 col-md-4 text-muted text-left text-md-right m-0">
           <strong>IT&nbsp;support</strong>
         </p>
       </div>

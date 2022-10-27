@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Container, Navbar, Nav } from 'react-bootstrap'
+import { NAME } from 'constants/core'
 
 const Navigation = () => (
   <Navbar
@@ -22,7 +23,7 @@ const Navigation = () => (
           width={30}
           height={30}
         />
-        &nbsp;&nbsp;Pedro Altamirano
+        &nbsp;&nbsp;{NAME}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="menu" />
       <Navbar.Collapse className="justify-content-end" id="menu">

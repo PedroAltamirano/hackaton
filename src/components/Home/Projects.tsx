@@ -18,7 +18,7 @@ const Projects = ({ projects }: IProps) => {
             <a href={principal.url}>
               <Image
                 fluid
-                className="mb-3 mb-lg-0"
+                className="mb-3 mb-md-0"
                 alt={principal.name}
                 src={principal.image}
               />
@@ -50,7 +50,7 @@ const Projects = ({ projects }: IProps) => {
             >
               <div className="bg-black text-center h-100">
                 <div className="d-flex h-100">
-                  <div className="my-auto px-5 text-left text-lg-left">
+                  <div className="my-auto px-5 text-left text-md-left">
                     <h4 className="text-white mb-2 font-ps font-24">
                       {item.name}
                     </h4>

@@ -1,10 +1,8 @@
-interface ILink {
+interface IInterest {
   id: number
   created_at: Date
   updated_at: Date
   name: string
-  url: string
-  icon: string
 }
 
-export default ILink
+export default IInterest

@@ -7,10 +7,10 @@ const Experience = () => (
     </h3>
     <div id="item-resume" className="item mb-3">
       <div className="item-heading row align-items-center mb-2">
-        <h4 className="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+        <h4 className="item-title col-12 col-md-6 col-md-8 mb-2 mb-md-0">
           Freelancer developer
         </h4>
-        <p className="m-0 p-0 item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
+        <p className="m-0 p-0 item-meta col-12 col-md-6 col-md-4 text-muted text-left text-md-right">
           The webdit | 2020 - present
         </p>
       </div>
@@ -24,10 +24,10 @@ const Experience = () => (
     </div>
     <div id="item-resume-1" className="item mb-3">
       <div className="item-heading row align-items-center mb-2">
-        <h4 className="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+        <h4 className="item-title col-12 col-md-6 col-md-8 mb-2 mb-md-0">
           Freelancer developer
         </h4>
-        <p className="m-0 p-0 item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
+        <p className="m-0 p-0 item-meta col-12 col-md-6 col-md-4 text-muted text-left text-md-right">
           ServiGraf | 2017 - present
         </p>
       </div>

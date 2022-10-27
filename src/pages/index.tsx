@@ -13,6 +13,7 @@ import ILink from 'types/links'
 import IProject from 'types/project'
 import IAbout from 'types/about'
 import { ISkillsCats } from 'types/skills'
+import { NAME } from 'constants/core'
 
 interface IProps {
   about: IAbout
@@ -70,12 +71,9 @@ const Home: NextPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <Head>
-      <title>Pedro Altamirano</title>
-      <meta name="author" content="Pedro Altamirano" />
-      <meta
-        name="description"
-        content="Pedro Altamirano personal portfolio and resume."
-      />
+      <title>{NAME}</title>
+      <meta name="author" content={NAME} />
+      <meta name="description" content={`${NAME} personal portfolio.`} />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 

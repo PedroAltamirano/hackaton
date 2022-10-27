@@ -1,41 +1,36 @@
+import { NAME } from 'constants/core'
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { Container, Stack } from 'react-bootstrap'
+import ILink from 'types/links'
+import { getIcon } from 'utils/icons'
 
-const Footer = () => (
-  <>
-    <div id="resume-footer" className="resume-footer text-center">
-      <ul className="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted">
-        <li className="list-inline-item mb-lg-0 mr-3">
-          <a
-            className="resume-link"
-            href="https://github.com/PedroAltamirano"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon icon={faGithubSquare} size="sm" className="mr-2" />
-            github.com/PedroAltamirano
-          </a>
-        </li>
-        <li className="list-inline-item mb-lg-0 mr-3">
-          <a
-            className="resume-link"
-            href="https://www.linkedin.com/in/pedro-altamirano/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon icon={faLinkedin} size="sm" className="mr-2" />
-            linkedin.com/in/pedro-altamirano
-          </a>
-        </li>
-      </ul>
-    </div>
-    <footer className="footer text-center py-4">
-      <small className="copyright text-muted">
-        Copyright ©&nbsp;Pedro Altamirano 2020
-      </small>
-    </footer>
-  </>
+interface IProps {
+  links: ILink[]
+}
+
+const Footer = ({ links }: IProps) => (
+  <footer className="text-center py-4">
+    <Stack
+      direction="horizontal"
+      gap={4}
+      className="justify-content-center mb-4 text-muted"
+    >
+      {links?.map((item, index) => (
+        <a
+          key={index}
+          className="text-muted"
+          href={item.url}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {getIcon(item.icon, { size: 'lg', className: 'mr-2' })}
+          {item.name}
+        </a>
+      ))}
+    </Stack>
+
+    <Container className="text-muted">{NAME} 2020</Container>
+  </footer>
 )
 
 export default Footer

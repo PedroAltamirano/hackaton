@@ -1,7 +1,6 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
+import { getIcon } from 'utils/icons'
 
 const Contact = () => (
   <section id="contact" className="p-5 text-center text-black bg-light">
@@ -50,12 +49,10 @@ const Contact = () => (
         <Col md={5}>
           <Card className="mb-4">
             <Card.Body className="text-center">
-              <Card.Title>
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  size="sm"
-                  className="text-primary"
-                />
+              <Card.Title className="align-items-center mb-0">
+                {getIcon('envelop', {
+                  className: 'text-primary',
+                })}
                 &nbsp;EMAIL
               </Card.Title>
               <hr className="my-4" />
@@ -66,12 +63,10 @@ const Contact = () => (
           </Card>
           <Card className="mb-4">
             <Card.Body className="text-center">
-              <Card.Title>
-                <FontAwesomeIcon
-                  icon={faMobileAlt}
-                  size="sm"
-                  className="text-primary"
-                />
+              <Card.Title className="align-items-center mb-0">
+                {getIcon('mobile', {
+                  className: 'text-primary',
+                })}
                 &nbsp;Phone
               </Card.Title>
               <hr className="my-4" />

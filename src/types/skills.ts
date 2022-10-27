@@ -3,7 +3,7 @@ export interface ISkill {
   created_at: Date
   updated_at: Date
   name: string
-  icon: string | null
+  icon: string
   isHard: boolean
   isSoft: boolean
 }
