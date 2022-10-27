@@ -5,6 +5,7 @@ import ILink from 'types/links'
 import IProject from 'types/project'
 import IAbout from 'types/about'
 import { ISkillsCats } from 'types/skills'
+import { PRINCIPAL_PROJECTS_LIMIT } from 'constants/core'
 import supabase from 'utils/supabase'
 
 import Header from 'components/Home/Header'
@@ -29,7 +30,7 @@ export const getStaticProps: GetStaticProps<IProps> = async () => {
     .select('*')
     .gt('importance', 0)
     .order('importance', { ascending: true })
-    .limit(3)
+    .limit(PRINCIPAL_PROJECTS_LIMIT)
   const { data: skillsCats } = await supabase
     .from('skill-category')
     .select(

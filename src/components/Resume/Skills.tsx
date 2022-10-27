@@ -1,36 +1,34 @@
-import React from 'react'
+import { ISkill } from 'types/skills'
 
-const Skills = () => (
-  <section id="skills" className="skills-section py-3">
-    <h3 className="text-uppercase resume-section-heading mb-4">Skills</h3>
-    <div id="item-skills" className="item">
-      <h4 className="item-title mb-2">technical</h4>
+interface IProps {
+  skills: ISkill[]
+}
+
+const Skills = ({ skills }: IProps) => (
+  <section className="py-3">
+    <h3 className="text-uppercase text-primary mb-4">Skills</h3>
+    <div>
+      <h6 className="item-title mb-2">Hard Skills</h6>
       <ul className="list-unstyled resume-skills-list">
-        <li className="mb-2">Bootstrap</li>
-        <li className="mb-2">
-          JavaScript/<strong>JQuery</strong>
-        </li>
-        <li className="mb-2">TypeScript</li>
-        <li className="mb-2">React/Vue</li>
-        <li className="mb-2">HTML/CSS</li>
-        <li className="mb-2">Python/PHP</li>
-        <li className="mb-2">Node</li>
-        <li className="mb-2">PostgreSQL/MySQL</li>
-        <li className="mb-2">MongosDB</li>
-        <li className="mb-2">Database design</li>
-        <li className="mb-2">Linux</li>
-        <li className="mb-2">nginx/apache</li>
-        <li>C/R</li>
+        {skills
+          ?.filter((item) => item.isHard)
+          .map((item, index) => (
+            <li key={index} className="mb-2">
+              {item.name}
+            </li>
+          ))}
       </ul>
     </div>
-    <div id="item-skills-1" className="item">
-      <h4 className="item-title mb-2">Professional</h4>
+    <div>
+      <h6 className="item-title mb-2">Soft Skills</h6>
       <ul className="list-unstyled resume-skills-list">
-        <li className="mb-2">Adaptability</li>
-        <li className="mb-2">Team player</li>
-        <li className="mb-2">Strong problem solver</li>
-        <li className="mb-2">Disciplined</li>
-        <li>Growing in lidership</li>
+        {skills
+          ?.filter((item) => item.isSoft)
+          .map((item, index) => (
+            <li key={index} className="mb-2">
+              {item.name}
+            </li>
+          ))}
       </ul>
     </div>
   </section>

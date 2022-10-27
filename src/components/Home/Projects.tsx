@@ -1,5 +1,6 @@
 import { Col, Container, Row, Image } from 'react-bootstrap'
 
+import { HALF } from 'constants/core'
 import IProject from 'types/project'
 
 interface IProps {
@@ -46,7 +47,7 @@ const Projects = ({ projects }: IProps) => {
             </Col>
             <Col
               lg={6}
-              className={`p-0 ${(index + 1) % 2 === 0 && 'order-md-first'}`}
+              className={`p-0 ${(index + 1) % HALF === 0 && 'order-md-first'}`}
             >
               <div className="bg-black text-center h-100">
                 <div className="d-flex h-100">

@@ -1,15 +1,19 @@
-import React from 'react'
+import ILanguage from 'types/languages'
 
-const Languages = () => (
-  <section id="languages" className="skills-section py-3">
-    <h3 className="text-uppercase resume-section-heading mb-4">Languages</h3>
-    <ul className="list-unstyled resume-lang-list">
-      <li className="mb-2">
-        Spanish&nbsp;<span className="text-muted">(Native)</span>
-      </li>
-      <li>
-        English&nbsp;<span className="text-muted">(Advanced)</span>
-      </li>
+interface IProps {
+  languages: ILanguage[]
+}
+
+const Languages = ({ languages }: IProps) => (
+  <section className="py-3">
+    <h3 className="text-uppercase text-primary mb-4">Languages</h3>
+    <ul className="list-unstyled">
+      {languages?.map((item, index) => (
+        <li key={index} className="mb-2">
+          {item.name}&nbsp;
+          <span className="text-muted">{`(${item.level})`}</span>
+        </li>
+      ))}
     </ul>
   </section>
 )

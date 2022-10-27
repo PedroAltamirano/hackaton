@@ -4,6 +4,8 @@ import {
   faEnvelope,
   faMobileAlt,
   faDatabase,
+  faPhoneAlt,
+  faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -25,6 +27,8 @@ const ICONS = {
   envelop: faEnvelope,
   mobile: faMobileAlt,
   db: faDatabase,
+  phone: faPhoneAlt,
+  marker: faMapMarkerAlt,
 
   github: faGithub,
   linkedin: faLinkedinIn,

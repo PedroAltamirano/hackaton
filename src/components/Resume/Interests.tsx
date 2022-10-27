@@ -1,14 +1,18 @@
-import React from 'react'
+import IInterest from 'types/interests'
 
-const Interests = () => (
-  <section id="interests" className="skills-section py-3">
-    <h3 className="text-uppercase resume-section-heading mb-4">
-      <strong>INTERESTS</strong>
-    </h3>
-    <ul className="list-unstyled resume-interests-list mb-0">
-      <li className="mb-2">Music</li>
-      <li className="mb-2">Gamming</li>
-      <li>Augmented Reality</li>
+interface IProps {
+  interests: IInterest[]
+}
+
+const Interests = ({ interests }: IProps) => (
+  <section className="py-3">
+    <h3 className="text-uppercase text-primary mb-4">INTERESTS</h3>
+    <ul className="list-unstyled">
+      {interests?.map((item, index) => (
+        <li key={index} className="mb-2">
+          {item.name}
+        </li>
+      ))}
     </ul>
   </section>
 )
