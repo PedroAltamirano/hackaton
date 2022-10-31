@@ -17,20 +17,22 @@ const Footer = ({ about, links }: IProps) => (
         gap={2}
         className="justify-content-center mb-4"
       >
-        {links?.map((item, index) => (
-          <Button
-            key={index}
-            size="lg"
-            variant="outline-primary"
-            className="btn-default mx-2"
-            role="button"
-            href={item.url}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {getIcon(item.icon)}
-          </Button>
-        ))}
+        {links
+          ?.filter((link) => !!link.icon)
+          .map((link, index) => (
+            <Button
+              key={index}
+              size="lg"
+              variant="outline-primary"
+              className="btn-default mx-2"
+              role="button"
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {getIcon(link.icon)}
+            </Button>
+          ))}
       </Stack>
 
       <Container className="text-center text-white">

@@ -16,18 +16,20 @@ const Footer = ({ about, links }: IProps) => (
       gap={4}
       className="justify-content-center mb-4 text-muted"
     >
-      {links?.map((item, index) => (
-        <a
-          key={index}
-          className="text-muted"
-          href={item.url}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {getIcon(item.icon, { size: 'lg', className: 'mr-2' })}
-          {item.name}
-        </a>
-      ))}
+      {links
+        ?.filter((link) => !!link.icon)
+        .map((link, index) => (
+          <a
+            key={index}
+            className="text-muted"
+            href={link.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {getIcon(link.icon, { size: 'lg', className: 'mr-2' })}
+            {link.name}
+          </a>
+        ))}
     </Stack>
 
     <Container className="text-muted">{about.name} 2020</Container>

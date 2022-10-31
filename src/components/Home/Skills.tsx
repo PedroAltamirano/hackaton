@@ -24,7 +24,7 @@ const Skills = ({ skillsCats }: IProps) => (
           <Col key={index} xs={6} lg={3} className="text-center p-3">
             <div>
               {category.skills
-                .filter((skill) => skill.icon)
+                .filter((skill) => !!skill.icon)
                 .map((skill, index) =>
                   getIcon(skill.icon, {
                     key: index,

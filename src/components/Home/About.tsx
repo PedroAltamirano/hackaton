@@ -1,3 +1,4 @@
+import { ROUTES } from 'config/routes'
 import Link from 'next/link'
 import { Button, Col, Container, Row, Image } from 'react-bootstrap'
 
@@ -14,7 +15,7 @@ const About = ({ about }: IProps) => (
         <Col lg={8} className="mx-auto">
           <h2 className="font-ps">About me</h2>
           <p className="m-0">{about.short}</p>
-          <Link href="resume">
+          <Link href={ROUTES.RESUME}>
             <Button variant="outline-primary" className="my-4">
               Resume
             </Button>
