@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
 import { Controller, useForm } from 'react-hook-form'
 
-import sendMail from 'services/mail'
 import { getIcon } from 'utils/icons'
 
 const Contact = () => {

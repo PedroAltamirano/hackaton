@@ -8,7 +8,8 @@
     "start": "next start",
     "ts": "npx tsc --noEmit",
     "lint": "npx eslint \"src/**/*.{tsx,ts}\"",
-    "lint:fix": "npx eslint \"src/**/*.{tsx,ts}\" --fix"
+    "lint:fix": "npx eslint \"src/**/*.{tsx,ts}\" --fix",
+    "hooks": "yarn ts && yarn lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
