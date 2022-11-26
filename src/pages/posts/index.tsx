@@ -11,7 +11,7 @@ interface IProps {
 }
 
 export const getStaticProps: GetStaticProps<IProps> = async () => {
-  const { data: projects } = await supabase.from('projects').select('*')
+  const { data: projects } = await supabase.from('proyects').select('*')
 
   return {
     props: {

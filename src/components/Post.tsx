@@ -9,7 +9,7 @@ interface IProps {
 }
 
 const Post = ({ title, content, image }: IProps) => (
-  <div className="bg-gray-200 p-4 rounded-md flex flex-col space-y-4">
+  <div className="bg-gray-200 p-4 rounded-md flex flex-col space-y-4 mb-4">
     <div className="flex items-center space-x-2">
       <div className="flex items-center">
         <Image

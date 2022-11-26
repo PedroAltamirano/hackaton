@@ -9,7 +9,7 @@ interface IProps {
 
 const Header = ({ header }: IProps) => {
   const [showSearch, setShowSearch] = useState(false)
-  const [hideOptions, setHideOptions] = useState(false)
+  const [hideOptions, setHideOptions] = useState(true)
 
   const handleOptions = () => {
     setHideOptions(!hideOptions)
@@ -40,13 +40,13 @@ const Header = ({ header }: IProps) => {
           <li className="p-4 bg-gray-100">
             <div className="flex space-x-2 items-center">
               <div className="w-4 h-4 bg-orange-400 rounded-full" />
-              <p>test</p>
+              <p>Проекты</p>
             </div>
           </li>
           <li className="p-4 bg-gray-100">
             <div className="flex space-x-2 items-center">
               <div className="w-4 h-4 bg-orange-400 rounded-full" />
-              <p>test</p>
+              <p>Резюме</p>
             </div>
           </li>
         </ul>
