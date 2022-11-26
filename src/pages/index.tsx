@@ -5,13 +5,13 @@ import supabase from 'utils/supabase'
 
 import Button from 'components/Button'
 
-interface IProps {}
+interface IProps { }
 
 export const getStaticProps: GetStaticProps<IProps> = async () => ({
   props: {},
 })
 
-const Home = ({}: InferGetStaticPropsType<typeof getStaticProps>) => (
+const Home = ({ }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <div className="bg-orange-500 w-screen h-screen p-6 flex justify-center items-center">
     <div className="bg-white rounded-md p-6 w-full">
       <div>
@@ -30,7 +30,7 @@ const Home = ({}: InferGetStaticPropsType<typeof getStaticProps>) => (
           <div>
             <div>
               <div>
-                <Image src="kit2.jpg" width={32} height={32} />
+                <Image src="/images/pfp_example.jpg" width={32} height={32} />
                 <div>
                   <strong>ФИО</strong>
                   (компания)
@@ -54,7 +54,12 @@ const Home = ({}: InferGetStaticPropsType<typeof getStaticProps>) => (
           <div>
             <div>
               <div>
-                <img src="/images/pfp_example.jpg" />
+                <Image
+                  src="/images/pfp_example.jpg"
+                  alt="test"
+                  width={32}
+                  height={32}
+                />
                 <div>
                   <strong>ФИО</strong>
                   (компания)
@@ -76,7 +81,12 @@ const Home = ({}: InferGetStaticPropsType<typeof getStaticProps>) => (
           <div>
             <div>
               <div>
-                <img src="kit2.jpg" />
+                <Image
+                  src="/images/pfp_example.jpg"
+                  alt="test2"
+                  width={32}
+                  height={32}
+                />
                 <div>
                   <strong>ФИО</strong>
                   (компания)
@@ -100,13 +110,28 @@ const Home = ({}: InferGetStaticPropsType<typeof getStaticProps>) => (
 
       <div>
         <button>
-          <img src="лента.svg" alt="чат" />
+          <Image
+            src="/images/pfp_example.jpg"
+            alt="чат"
+            width={32}
+            height={32}
+          />
         </button>
         <button>
-          <img src="чаты.svg" alt="чат" />
+          <Image
+            src="/images/pfp_example.jpg"
+            alt="чат"
+            width={32}
+            height={32}
+          />
         </button>
         <button>
-          <img src="профиль.svg" alt="чат" />
+          <Image
+            src="/images/pfp_example.jpg"
+            alt="чат"
+            width={32}
+            height={32}
+          />
         </button>
       </div>
     </div>
