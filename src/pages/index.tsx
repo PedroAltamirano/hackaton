@@ -1,6 +1,9 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
+import Image from 'next/image'
 
 import supabase from 'utils/supabase'
+
+import Button from 'components/Button'
 
 interface IProps { }
 
@@ -27,7 +30,7 @@ const Home = ({ }: InferGetStaticPropsType<typeof getStaticProps>) => (
           <div>
             <div>
               <div>
-                <img src="kit2.jpg" />
+                <Image src="kit2.jpg" width={32} height={32} />
                 <div>
                   <strong>ФИО</strong>
                   (компания)
@@ -44,6 +47,7 @@ const Home = ({ }: InferGetStaticPropsType<typeof getStaticProps>) => (
               <button type="submit" name="add">
                 отзывы
               </button>
+              <Button title="отзывы" />
             </div>
           </div>
 
