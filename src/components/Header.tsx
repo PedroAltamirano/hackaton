@@ -3,7 +3,11 @@ import { Bars3Icon, MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 
 import Input from './Input'
 
-const Header = () => {
+interface IProps {
+  header: string
+}
+
+const Header = ({ header }: IProps) => {
   const [showSearch, setShowSearch] = useState(false)
   const [hideOptions, setHideOptions] = useState(false)
 
@@ -25,7 +29,7 @@ const Header = () => {
           </div>
         ) : (
           <div className="flex justify-center w-full items-center text-lg">
-            Header
+            {header}
           </div>
         )}
         <MagnifyingGlassIcon className="h-10 w-10" onClick={handleSearch} />

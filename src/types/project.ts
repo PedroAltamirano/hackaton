@@ -1,15 +1,10 @@
 interface IProject {
   id: number
-  created_at: Date
-  updated_at: Date
-  name: string
-  description: string
-  short: string
-  published: boolean
-  importance: number
-  role: string
+  author_id: number
+  title: string
+  body: string
   image: string
-  url: string
+  created_at: string
 }
 
 export default IProject

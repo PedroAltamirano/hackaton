@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid'
 
 import Button from './Button'
 
@@ -14,7 +13,7 @@ const Post = ({ title, content, image }: IProps) => (
     <div className="flex items-center space-x-2">
       <div className="flex items-center">
         <Image
-          src="/images/pfp_example.jpg"
+          src={image}
           className="rounded-full"
           width={32}
           height={32}

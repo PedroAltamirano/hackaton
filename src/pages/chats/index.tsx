@@ -2,7 +2,7 @@ import Chat from 'components/Chat'
 import Mobile from 'layouts/Mobile'
 
 const Chats = () => (
-  <Mobile>
+  <Mobile header="Chat">
     <Chat
       image="/images/pfp_example.jpg"
       name="Pedro"

@@ -3,11 +3,12 @@ import Header from 'components/Header'
 
 interface IProps {
   children: JSX.Element
+  header: string
 }
 
-const Mobile = ({ children }: IProps) => (
+const Mobile = ({ children, header }: IProps) => (
   <div className="flex flex-col h-screen">
-    <Header />
+    <Header header={header} />
     <div className="grow overflow-y-auto p-4">{children}</div>
     <Footer />
   </div>

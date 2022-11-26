@@ -1,19 +1,39 @@
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
+import supabase from 'utils/supabase'
+
+import IProject from 'types/project'
+
 import Post from 'components/Post'
 import Mobile from 'layouts/Mobile'
 
-const Posts = () => (
-  <Mobile>
-    <Post
-      title="Proyect_Post"
-      content="
-    И нет сомнений, что некоторые особенности внутренней политики и по сей
-    день остаются уделом либералов, которые жаждут быть функционально
-    разнесены на независимые элементы. Являясь всего лишь частью общей
-    картины, интерактивные прототипы, инициированные исключительно
-    синтетически, призваны к ответу. Наше дело не так однозначно, как может
-    показаться: повышение уровня гражданского сознания обеспечивает
-    актуальность глубокомысленных рассуждений."
-    />
+interface IProps {
+  projects: IProject[]
+}
+
+export const getStaticProps: GetStaticProps<IProps> = async () => {
+  const { data: projects } = await supabase.from('projects').select('*')
+
+  return {
+    props: {
+      projects: projects as IProject[],
+    },
+  }
+}
+
+const Posts = ({
+  projects,
+}: InferGetStaticPropsType<typeof getStaticProps>) => (
+  <Mobile header="posts">
+    <>
+      {projects?.map((project, index) => (
+        <Post
+          key={index}
+          title={project.title}
+          content={project.body}
+          image={project.image}
+        />
+      ))}
+    </>
   </Mobile>
 )
 
