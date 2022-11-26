@@ -1,23 +1,112 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
-import Head from 'next/head'
 
 import supabase from 'utils/supabase'
 
-interface IProps {
-}
+interface IProps { }
 
-export const getStaticProps: GetStaticProps<IProps> = async () => {
-  return {
-    props: {
-    },
-  }
-}
+export const getStaticProps: GetStaticProps<IProps> = async () => ({
+  props: {},
+})
 
-const Home = ({
-}: InferGetStaticPropsType<typeof getStaticProps>) => (
-  <>
-    
-  </>
+const Home = ({ }: InferGetStaticPropsType<typeof getStaticProps>) => (
+  <div className="bg-orange-500 w-screen h-screen p-6 flex justify-center items-center">
+    <div className="bg-white rounded-md p-6 w-full">
+      <div>
+        <form>
+          <div>
+            <select id="selectvalue">
+              <option>проекты</option>
+              <option>резюме</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <img src="kit2.jpg" />
+                <div>
+                  <strong>ФИО</strong>
+                  (компания)
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>текст</div>
+            </div>
+            <div>
+              <button type="submit" name="add">
+                оставить заявку
+              </button>
+              <button type="submit" name="add">
+                отзывы
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <div>
+                <img src="kit2.jpg" />
+                <div>
+                  <strong>ФИО</strong>
+                  (компания)
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>текст</div>
+            </div>
+            <div>
+              <button type="submit" name="add">
+                оставить заявку
+              </button>
+              <button type="submit" name="add">
+                отзывы
+              </button>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>
+                <img src="kit2.jpg" />
+                <div>
+                  <strong>ФИО</strong>
+                  (компания)
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>текст</div>
+            </div>
+            <div>
+              <button type="submit" name="add">
+                оставить заявку
+              </button>
+              <button type="submit" name="add">
+                отзывы
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button>
+          <img src="лента.svg" alt="чат" />
+        </button>
+        <button>
+          <img src="чаты.svg" alt="чат" />
+        </button>
+        <button>
+          <img src="профиль.svg" alt="чат" />
+        </button>
+      </div>
+    </div>
+  </div>
 )
 
 export default Home
