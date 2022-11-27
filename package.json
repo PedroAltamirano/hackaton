@@ -21,7 +21,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.38.0",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "zustand": "^4.1.4"
   },
   "devDependencies": {
     "@tinkin/eslint-config": "^1.0.0",
